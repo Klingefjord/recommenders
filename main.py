@@ -83,7 +83,7 @@ if __name__ == "__main__":
     parser.add_argument("--model_name", default="matrix-factorization")
     parser.add_argument("--epoch", type=int, default=20)
     parser.add_argument("--learning_rate", type=float, default=1e-3)
-    parser.add_argument("--batch_size", type=int, default=128)
+    parser.add_argument("--batch_size", type=int, default=256)
     parser.add_argument("--weight_decay", type=float, default=1e-5)
     parser.add_argument("--save_dir", default="./chkpt")
     args = parser.parse_args()
