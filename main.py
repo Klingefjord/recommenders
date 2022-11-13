@@ -21,7 +21,6 @@ def main(
     learning_rate,
     batch_size,
     weight_decay,
-    save_dir,
 ):
     # prepare the dataset
     dataset, train_loader, validation_loader = prepare_data(
@@ -80,12 +79,11 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--dataset_path", default="../data/ml-25m/ratings.csv")
     parser.add_argument("--dataset_name", default="ml-25m")
-    parser.add_argument("--model_name", default="matrix-factorization")
+    parser.add_argument("--model_name", default="neural-collab")
     parser.add_argument("--epoch", type=int, default=20)
     parser.add_argument("--learning_rate", type=float, default=1e-3)
     parser.add_argument("--batch_size", type=int, default=256)
     parser.add_argument("--weight_decay", type=float, default=1e-5)
-    parser.add_argument("--save_dir", default="./chkpt")
     args = parser.parse_args()
 
     main(
