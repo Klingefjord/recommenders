@@ -41,14 +41,14 @@ class NeuralCollaborativeModel(pl.LightningModule):
 
     def training_step(self, batch, _):
         features, targets = batch
-        preds = self(features)
+        preds = self(features).squeeze()
         loss = nn.functional.mse_loss(preds, targets)
         self.log("train_loss", loss)
         return loss
 
     def validation_step(self, batch, _):
         features, targets = batch
-        preds = self(features)
+        preds = self(features).squeeze()
         loss = nn.functional.mse_loss(preds, targets)
         self.log("val_loss", loss)
         return loss
