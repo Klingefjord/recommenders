@@ -12,5 +12,5 @@ Wide and deep performed slightly better, but the difference would probably have 
 
 ![Comparison between the wide and deep and neural collab models](./val_loss.png)
 
-You can use the models to find movies that you might like here.
+Demo URL: https://klingefjord-recommenders-streamlit-app-ri6m6z.streamlit.app/
 
